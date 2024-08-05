@@ -38,7 +38,7 @@ To set up the project, you need to install both PHP and JavaScript dependencies.
    ```
 
 2. **.env Config**
-   ```bash
+```bash
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -46,12 +46,39 @@ DB_DATABASE=library
 DB_USERNAME=root
 DB_PASSWORD=your_password
 ```
-2. **.env Config**
-   ```bash
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=library
-DB_USERNAME=root
-DB_PASSWORD=your_password
+3. **Run Migrations**
+```bash
+php artisan migrate
+```
+
+4. **Start the Server**
+```bash
+php artisan serve
+```
+
+## API Endpoints
+```bash
+GET /api/authors                    //List all authors
+POST /api/authors                   //Create a new author
+GET /api/authors/{id}               //Get an author by ID
+PUT /api/authors/{id}               //Update an author
+DELETE /api/authors/{id}            //Delete an author
+
+
+GET /api/books                      //List all books
+POST /api/books                     //Create a new books
+GET /api/books/{id}                 //Get a book by ID
+PUT /api/books/{id}                 //Update a book
+DELETE /api/books/{id}              //Delete a book
+
+
+GET /api/borrow-records            //List all borrow records
+POST /api/borrow-records           //Create a new borrow record
+GET /api/borrow-records/{id}       //Get a borrow record by ID
+PUT /api/borrow-records/{id}       //Update a borrow record
+DELETE /api/borrow-records/{id}    //Delete a borrow records
+
+
+
+
 ```
